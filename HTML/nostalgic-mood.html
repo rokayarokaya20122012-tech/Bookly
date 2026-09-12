@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Nostalgic & Warm Mood</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="custom-navbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="../index.html" class="brand">
+          <img src="../Home.pic/logo.jpg" alt="Bookly Logo" class="logo-img" />
+          <span class="logo">Bookly</span>
+        </a>
+        <nav class="nav-links d-flex gap-4">
+          <a href="../index.html" class="active">Home</a>
+          <a href="../index.html#moods">Moods</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section hero-nostalgic text-center py-5">
+      <div class="container">
+        <h1>Nostalgic & Warm</h1>
+        <p class="hero-subtitle hero-nostalgictxt text-muted mx-auto">
+          Comforting tales that bring back cherished memories, simple times, and
+          the cozy warmth of the past.
+        </p>
+      </div>
+    </section>
+
+    <div class="filter-header-bar py-3 mb-4 border-bottom border-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <span class="showing-text">SHOWING: 1 TITLE</span>
+
+        <div class="view-options" role="group" aria-label="Book view options">
+          <button class="view-button active" id="grid-view-btn" type="button">
+            Grid view
+          </button>
+          <button class="view-button" id="list-view-btn" type="button">
+            List view
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book Cards Section -->
+    <section class="book-cards-section">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="book-grid">
+          <!-- Book Card 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../Nostalgic/nadi-el-video.webp"
+                class="card-img-top"
+                alt="Nadi El-Video"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Nadi El-Video</h3>
+                <h5 class="card-writer">By Reem Jamil</h5>
+                <p class="card-text">
+                  A warm nostalgic story about the 1990s generation, following a
+                  small video rental shop amidst rapid social and technological
+                  changes.
+                </p>
+                <p class="card-text">Rating: 3.48/5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const bookGrid = document.getElementById("book-grid");
+      const gridViewButton = document.getElementById("grid-view-btn");
+      const listViewButton = document.getElementById("list-view-btn");
+
+      function setBookView(view) {
+        const isListView = view === "list";
+        bookGrid.classList.toggle("view-list", isListView);
+        gridViewButton.classList.toggle("active", !isListView);
+        listViewButton.classList.toggle("active", isListView);
+      }
+
+      gridViewButton.addEventListener("click", () => setBookView("grid"));
+      listViewButton.addEventListener("click", () => setBookView("list"));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bookly</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="custom-navbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="index.html" class="brand">
+          <img src="Home.pic/logo.jpg" alt="Bookly Logo" class="logo-img" />
+          <span class="logo">Bookly</span>
+        </a>
+        <nav class="nav-links d-flex gap-4">
+          <a href="index.html" class="active">Home</a>
+          <a href="#moods">Moods</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-center py-5">
+      <div class="container">
+        <h1>Discover Your Next Literary Journey</h1>
+        <p class="hero-subtitle text-muted mx-auto">
+          Move beyond genres. Find your next read based on the emotion you seek
+          to feel. An editorial discovery platform for the discerning
+          bibliophile.
+        </p>
+      </div>
+    </section>
+
+    <!-- Intent Bar -->
+    <div class="intent-bar py-3 mb-5 border-top border-bottom">
+      <div class="container d-flex justify-content-center gap-4 flex-wrap">
+        <a href="HTML/mysterious-mood.html" class="pill"
+          >ENIGMATIC & MYSTERIOUS</a
+        >
+        <a href="HTML/romantic-mood.html" class="pill">SOFT & ROMANTIC</a>
+        <a href="HTML/adventurous-mood.html" class="pill">BOLD & ADVENTUROUS</a>
+        <a href="HTML/thoughtful-mood.html" class="pill"
+          >THOUGHTFUL & REFLECTIVE</a
+        >
+        <a href="HTML/nostalgic-mood.html" class="pill">NOSTALGIC & WARM</a>
+      </div>
+    </div>
+
+    <!-- Browse by Mood -->
+    <section id="moods" class="moods-section py-4">
+      <div class="container">
+        <div class="mb-4 d-flex justify-content-between align-items-end">
+          <div>
+            <h3>Browse by Mood</h3>
+            <p class="text-muted m-0">
+              Our collections are hand-picked for every reader's emotion.
+            </p>
+          </div>
+          <a
+            href="#moods"
+            class="view-all text-dark text-decoration-none fw-bold"
+            >VIEW ALL CATEGORIES</a
+          >
+        </div>
+
+        <div class="moods-scroll-container d-flex gap-3">
+          <a href="HTML/mysterious-mood.html" class="mood-card-link">
+            <div class="card mood-card text-white">
+              <img
+                src="Home.pic/mystery-bg.jpg"
+                class="card-img"
+                alt="Mystery"
+              />
+              <div class="card-img-overlay">
+                <h5 class="card-title">Enigmatic & Mysterious</h5>
+                <p class="card-text">Enigmatic whispers and shadows.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="HTML/romantic-mood.html" class="mood-card-link">
+            <div class="card mood-card text-white">
+              <img
+                src="Home.pic/romance-bg.jpg"
+                class="card-img"
+                alt="Romance"
+              />
+              <div class="card-img-overlay">
+                <h5 class="card-title">Soft & Romantic</h5>
+                <p class="card-text">Heartfelt stories and soft moments.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="HTML/adventurous-mood.html" class="mood-card-link">
+            <div class="card mood-card text-white">
+              <img
+                src="Home.pic/adventurous-bg.jpg"
+                class="card-img"
+                alt="Adventurous"
+              />
+              <div class="card-img-overlay">
+                <h5 class="card-title">Bold & Adventurous</h5>
+                <p class="card-text">Uncharted paths and wild quests.</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="HTML/thoughtful-mood.html" class="mood-card-link">
+            <div class="card mood-card text-white">
+              <img
+                src="Home.pic/thoughtful-bg.jpg"
+                class="card-img"
+                alt="Thoughtful"
+              />
+              <div class="card-img-overlay">
+                <h5 class="card-title">Thoughtful & Reflective</h5>
+                <p class="card-text">Deep narratives that stay with you.</p>
+              </div>
+            </div>
+          </a>
+          <a href="HTML/nostalgic-mood.html" class="mood-card-link">
+            <div class="card mood-card text-white">
+              <img
+                src="Home.pic/nostalgic-bg.jpg"
+                class="card-img"
+                alt="Nostalgic"
+              />
+              <div class="card-img-overlay">
+                <h5 class="card-title">Nostalgic & Warm</h5>
+                <p class="card-text">Echoes of the past and fond memories.</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="Quote" class="quote-section py-4">
+      <div class="container text-center">
+        <blockquote class="blockquote">
+          <p class="mb-0">
+            "Books are a uniquely portable magic.They are mirrors of our
+            souls,reflecting exactly what we need to see at any given moment."
+          </p>
+          <cite class="blockquote-footer">Stephen King, On Writing</cite>
+        </blockquote>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Romantic Mood</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="custom-navbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="../index.html" class="brand">
+          <img src="../Home.pic/logo.jpg" alt="Bookly Logo" class="logo-img" />
+          <span class="logo">Bookly</span>
+        </a>
+        <nav class="nav-links d-flex gap-4">
+          <a href="../index.html" class="active">Home</a>
+          <a href="../index.html#moods">Moods</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section hero-romantic text-center py-5">
+      <div class="container">
+        <h1>Soft & Romantic</h1>
+        <p class="hero-subtitle hero-romantictxt text-muted mx-auto">
+          Gentle stories about sweet chance encounters, shared laughter, and
+          finding home in another person.
+        </p>
+      </div>
+    </section>
+
+    <div class="filter-header-bar py-3 mb-4 border-bottom border-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <span class="showing-text">SHOWING: 4 TITLES</span>
+
+        <div class="view-options" role="group" aria-label="Book view options">
+          <button class="view-button active" id="grid-view-btn" type="button">
+            Grid view
+          </button>
+          <button class="view-button" id="list-view-btn" type="button">
+            List view
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book Cards Section -->
+    <section class="book-cards-section">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="book-grid">
+          <!-- Book Card 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../Romance/white-nights.jpg"
+                class="card-img-top"
+                alt="White Nights"
+              />
+              <div class="card-body">
+                <h3 class="card-title">White Nights</h3>
+                <h5 class="card-writer">By Fyodor Dostoevsky</h5>
+                <p class="card-text">
+                  A novel about love, loss, and the complexities of human
+                  relationships.
+                </p>
+                <p class="card-text">Rating: 4.6/5</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book Card 2 -->
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../Romance/Melina.jpg"
+                class="card-img-top"
+                alt="Letters To Melena"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Letters To Melena</h3>
+                <h5 class="card-writer">By franz kafka</h5>
+                <p class="card-text">
+                  A haunting exploration of love, alienation, and the human
+                  condition.
+                </p>
+                <p class="card-text">Rating: 3.9/5</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book Card 3 -->
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../Romance/magjdolin.jpg"
+                class="card-img-top"
+                alt="Magjdolin"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Magjdolin</h3>
+                <h5 class="card-writer">By Alphonse Karr</h5>
+                <p class="card-text">
+                  A compelling tale of redemption and self-discovery.
+                </p>
+                <p class="card-text">Rating: 3.86/5</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book Card 4-->
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../Romance/El Dinasor.jpg"
+                class="card-img-top"
+                alt="El Dinasor"
+              />
+              <div class="card-body">
+                <h3 class="card-title">El Dinasor</h3>
+                <h5 class="card-writer">By Amr Hussein</h5>
+                <p class="card-text">
+                  A novel that blends the romance of an elderly couple with the
+                  nostalgia of Maadi Street.
+                </p>
+                <p class="card-text">Rating: 4.14/5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const bookGrid = document.getElementById("book-grid");
+      const gridViewButton = document.getElementById("grid-view-btn");
+      const listViewButton = document.getElementById("list-view-btn");
+
+      function setBookView(view) {
+        const isListView = view === "list";
+        bookGrid.classList.toggle("view-list", isListView);
+        gridViewButton.classList.toggle("active", !isListView);
+        listViewButton.classList.toggle("active", isListView);
+      }
+
+      gridViewButton.addEventListener("click", () => setBookView("grid"));
+      listViewButton.addEventListener("click", () => setBookView("list"));
+    </script>
+  </body>
+</html>

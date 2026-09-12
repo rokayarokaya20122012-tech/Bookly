@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Mysterious Mood</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="custom-navbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a href="../index.html" class="brand">
+          <img src="../Home.pic/logo.jpg" alt="Bookly Logo" class="logo-img" />
+          <span class="logo">Bookly</span>
+        </a>
+        <nav class="nav-links d-flex gap-4">
+          <a href="../index.html" class="active">Home</a>
+          <a href="../index.html#moods">Moods</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section hero-mysterious text-center py-5">
+      <div class="container">
+        <h1>Enigmatic & Mysterious</h1>
+        <p class="hero-subtitle hero-mysterioustxt text-muted mx-auto">
+          Step into the shadows of the unknown, where secrets and enigmas await.
+          Our curated collection of mysterious books will keep you on the edge
+          of your seat, unraveling thrilling tales that will leave you
+          questioning reality.
+        </p>
+      </div>
+    </section>
+
+    <div class="filter-header-bar py-3 mb-4 border-bottom border-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <span class="showing-text">SHOWING: 4 TITLES</span>
+
+        <div class="view-options" role="group" aria-label="Book view options">
+          <button class="view-button active" id="grid-view-btn" type="button">
+            Grid view
+          </button>
+          <button class="view-button" id="list-view-btn" type="button">
+            List view
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Book Cards Section -->
+    <section class="book-cards-section">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-md-3 g-4" id="book-grid">
+          <!-- Book Card 1 -->
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../Mysterious.pic/silent-patient.jpg"
+                class="card-img-top"
+                alt="The Silent Patient"
+              />
+              <div class="card-body">
+                <h3 class="card-title">The Silent Patient</h3>
+                <h5 class="card-writer" id="writer1">By Alex Michaelides</h5>
+                <p class="card-text">
+                  A psychological thriller that will keep you guessing until the
+                  very end.
+                </p>
+                <p class="card-text">Rating: 4.5/5</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book Card 2 -->
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../Mysterious.pic/Dear-Debbie.jpg"
+                class="card-img-top"
+                alt="Dear Debbie"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Dear Debbie</h3>
+                <h5 class="card-writer">By Fredia McFadden</h5>
+
+                <p class="card-text">
+                  A gripping tale of suspense and intrigue that will keep you on
+                  the edge of your seat.
+                </p>
+                <p class="card-text">Rating: 4.2/5</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book Card 3 -->
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../Mysterious.pic/Dhubabat-Zarqa.jpg"
+                class="card-img-top"
+                alt="Dhubabat Zarqa'"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Dhubabat Zarqa'</h3>
+                <h5 class="card-writer">By Noha Dawud</h5>
+                <p class="card-text">
+                  Quite residential compound becomes dangerous when a murder
+                  happens and everyone has a secret.
+                </p>
+                <p class="card-text">Rating: 4.1/5</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Book Card 4 -->
+          <div class="col">
+            <div class="card h-100">
+              <img
+                src="../Mysterious.pic/Helmy-Mahran.jpg"
+                class="card-img-top"
+                id="book1"
+                alt="Helmy Mahran"
+              />
+              <div class="card-body">
+                <h3 class="card-title">Helmy Mahran</h3>
+                <h5 class="card-writer">By Ahmed Osman</h5>
+                <p class="card-text">
+                  An edge-of-your-seat crime series following lawyer Helmy
+                  Mehran as he uncovers mind-bending mysteries and dark secrets.
+                </p>
+                <p class="card-text">Rating: 3.82/5</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const bookGrid = document.getElementById("book-grid");
+      const gridViewButton = document.getElementById("grid-view-btn");
+      const listViewButton = document.getElementById("list-view-btn");
+
+      function setBookView(view) {
+        const isListView = view === "list";
+        bookGrid.classList.toggle("view-list", isListView);
+        gridViewButton.classList.toggle("active", !isListView);
+        listViewButton.classList.toggle("active", isListView);
+      }
+
+      gridViewButton.addEventListener("click", () => setBookView("grid"));
+      listViewButton.addEventListener("click", () => setBookView("list"));
+    </script>
+  </body>
+</html>
